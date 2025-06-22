@@ -14,7 +14,7 @@ export class AuthorsService {
 
 async create(createAuthorDto: CreateAuthorDto): Promise<Author> {
   const author = await this.authorModel.create(createAuthorDto);
-  return author;
+  return author; // No toObject or transformation needed here
 }
 async findAll(
     page: number = 1,

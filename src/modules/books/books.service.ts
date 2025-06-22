@@ -36,6 +36,7 @@ async create(createBookDto: CreateBookDto): Promise<Book | null> {
     throw new BadRequestException('Author does not exist');
   }
 
+  // Check if ISBN already exists
   const existingBook = await this.bookModel.findOne({ isbn });
   if (existingBook) {
     throw new ConflictException(`A book with ISBN "${isbn}" already exists.`);
@@ -48,7 +49,7 @@ async create(createBookDto: CreateBookDto): Promise<Book | null> {
 
   const savedBook = await book.save();
 
-  // ✅ Re-fetch with population to ensure full fields
+  // Re-fetch with author populated
   const populatedBook = await this.bookModel.findById(savedBook._id).populate('author');
 
   return populatedBook;
