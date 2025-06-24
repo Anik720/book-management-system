@@ -36,6 +36,16 @@ cd book-management-system
 # Install dependencies
 npm install
 
+## 🔐 Environment Variables
+
+Create a `.env` file in the root directory and define the following:
+
+| Variable       | Description                               | Example                                      |
+|----------------|-------------------------------------------|----------------------------------------------|
+| `PORT`         | Port number the server will run on        | `3000`                                       |
+| `MONGODB_URI`  | MongoDB connection string                 | `mongodb://localhost:27017/book_management_db` |
+
+These variables are loaded automatically using `@nestjs/config`.
 
 
 ## Running the App
