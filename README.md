@@ -1,6 +1,6 @@
 # 📚 Book Management System (NestJS)
 
-A simple RESTful API for managing books and authors, built with [NestJS](https://nestjs.com/) and [SQLite](https://www.sqlite.org/) using [TypeORM](https://typeorm.io/). This project demonstrates best practices in architecture, data validation, error handling, and testing.
+A simple RESTful API for managing books and authors, built with [NestJS](https://nestjs.com/) and MongoDB using Mongoose. This project demonstrates best practices in architecture, data validation, error handling, and testing.
 
 ---
 
@@ -19,8 +19,7 @@ A simple RESTful API for managing books and authors, built with [NestJS](https:/
 ## 🛠️ Tech Stack
 
 - **Framework:** [NestJS](https://nestjs.com/)
-- **Database:** SQLite (with TypeORM)
-  - **Note:** In production, I prefer **PostgreSQL** for its robustness, JSONB support, strong indexing, and advanced querying capabilities.
+- **Database:** MongoDB using Mongoose
 - **Testing:** Jest & Supertest
 - **Validation:** `class-validator`, `class-transformer`
 
